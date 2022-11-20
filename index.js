@@ -11,15 +11,18 @@ function getUrl(inputValue) {
 }
 async function clickHandler() {
 
-    try {
+    
         let inputText = input.value;
-        let response = await fetch(getUrl(inputText))
-        let translatedValue = await response.json()
-        console.log(translatedValue)
-    }
-    catch (err) {
-        console.log("Error--->", err)
-    }
+        fetch(getUrl(inputText))
+            .then(response => response.json())
+            .then(jsonRes => {
+                var translatedText = jsonRes.contents.translated;
+                console.log(translatedText)
+                output.innerText = translatedText;
+            })
+            .catch(()=>{alert("something went wrong. try after some time")})
+    
+   
 
 }
 

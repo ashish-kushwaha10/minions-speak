@@ -1,17 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>minion-speak</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: rgb(16, 16, 16);
+            color: white;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 40px;
+            border: 2px solid blue;
+            border-radius: 25px;
+
+        }
+        div{
+
+            margin-left: auto;
+            margin-right: auto;
+            width: 30%;
+            height: 100px;
+            border: 1px solid white;
+            background-color: rgb(228, 227, 227);
+            color: black;
+            text-align: left;
+            padding: 30px 20px;
+        }
+    </style>
 </head>
+
 <body>
-  
-    <textarea placeholder="type something" id="input" cols="30" rows="10"></textarea>
-    <br>
-    <button id="btn-translate">Click Me</button>
-    <div id="output-div"></div>
+    <br><br><br>
+    <main>
+        <textarea placeholder="type something" id="input" cols="30" rows="10"></textarea>
+        <br><br>
+        <button id="btn-translate">Translate</button>
+        <br><br>
+        <h2>Output</h2>
+        <br>
+        <div id="output-div"></div>
+
+    </main>
+
     <script src="index.js"></script>
 </body>
+
 </html>
